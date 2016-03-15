@@ -48,7 +48,7 @@ Depois de realizar o build, certifique de copiar os seguintes arquivos para a pa
 
 Depois que você fez a build do código fonte rode novamente o comando abaixo para gerar o aplicativo final
 
-npm run release
+> npm run release
 
 **Nota 1:**
 Estarei adicionando, em breve, três rotinas no gulp que não foi incluída. 
