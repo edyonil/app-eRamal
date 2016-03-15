@@ -1,0 +1,10 @@
+{
+  "name": "eRamal",
+  "productName": "eRamal",
+  "identifier": "com.eramal.electron",
+  "description": "Starter for your Electron application. Out of the box ready for serious stuff.",
+  "version": "0.1.0",
+  "author": "Mr Gumby",
+  "copyright": "© 2016, your company here",
+  "main": "main.js"
+}

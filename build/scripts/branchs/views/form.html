@@ -1,0 +1,44 @@
+<md-toolbar md-scroll-shrink style="background-color: #FF9800">
+    <div class="md-toolbar-tools">
+        <md-input-container style="margin-top:40px;width: 100%" md-no-float class="md-block">
+            <input ng-change="_branchCtrl.search(_branchCtrl.textoBusca)" class="ligth" ng-model="_branchCtrl.textoBusca" type="text" placeholder="Procurar ramal" >
+            <md-icon class="material-icons step" style="color: #FFF">search</md-icon>
+        </md-input-container>
+    </div>
+</md-toolbar>
+<md-content ng-init="_branchCtrl.all()">
+    <md-list style="padding-bottom: 30px">
+        <md-list-item class="md-3-line" ng-repeat="ramais in _branchCtrl.listaRamais">
+            <div class="md-list-item-text">
+                <h3 style="text-transform: capitalize">{{ramais.nome}}</h3>
+                <p><md-icon style="font-size: 12px">domain</md-icon> {{ramais.unidade}}</p>
+                <p><md-icon style="font-size: 12px">phone</md-icon> {{ramais.numero}}</p>
+            </div>
+            <div class="md-secondary not-margin">
+                <md-button class="md-fab md-mini md-warn" ng-click="_branchCtrl.remove(ramais, $index)">
+                    <md-icon class="material-design">remove</md-icon>
+                </md-button>
+                <md-button class="md-fab md-mini md-primary" ng-click="_branchCtrl.form = ramais">
+                    <md-icon class="material-design">edit</md-icon>
+                </md-button>
+            </div>
+
+            <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+    </md-list>
+</md-content>
+
+
+<!--
+<md-input-container>
+    <label>Nome</label>
+    <input ng-model="_ctrl.selected.nome" type="text">
+</md-input-container>
+<md-input-container md-no-float>
+    <label>Ramal</label>
+    <input ng-model="_ctrl.selected.ramal" type="text">
+</md-input-container>
+<md-input-container md-no-float>
+    <label>City</label>
+    <input ng-model="_ctrl.selected.unidade" type="text" >
+</md-input-container>-->

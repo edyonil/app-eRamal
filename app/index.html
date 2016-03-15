@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Lista de Ramais</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- build:css assets/css/app.css -->
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="../bower_components/material-design-icons/iconfont/material-icons.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="loading" id="loading">
+        <svg width='184px' height='184px' viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" xmlns:xlink="http://www.w3.org/1999/xlink" class="uil-inf"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><path id="uil-inf-path" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" fill="none" stroke="#9f8e21" stroke-width="1px" stroke-dasharray="5px"></path><circle cx="0" cy="0" r="5" fill="#ff9600"><animateMotion begin="0s" dur="1s" repeatCount="indefinite"><mpath xlink:href="#uil-inf-path"></mpath></animateMotion></circle><circle cx="0" cy="0" r="5" fill="#ff9600"><animateMotion begin="0.08s" dur="1s" repeatCount="indefinite"><mpath xlink:href="#uil-inf-path"></mpath></animateMotion></circle><circle cx="0" cy="0" r="5" fill="#ff9600"><animateMotion begin="0.16s" dur="1s" repeatCount="indefinite"><mpath xlink:href="#uil-inf-path"></mpath></animateMotion></circle><circle cx="0" cy="0" r="5" fill="#ff9600"><animateMotion begin="0.25s" dur="1s" repeatCount="indefinite"><mpath xlink:href="#uil-inf-path"></mpath></animateMotion></circle><circle cx="0" cy="0" r="5" fill="#ff9600"><animateMotion begin="0.33s" dur="1s" repeatCount="indefinite"><mpath xlink:href="#uil-inf-path"></mpath></animateMotion></circle></svg>
+    </div>
+    <ui-view layout="column" style="height: 478px;"></ui-view>
+    <!-- build:js scripts/vendor.js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="../bower_components/angular-wsql/dist/wSQL.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:app scripts/app.js -->
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/branchs/config/wSQL.config.js"></script>
+    <script src="./scripts/branchs/branchs_app.js"></script>
+    <script src="./scripts/branchs/controllers/branch_controller.js"></script>
+    <script src="./scripts/branchs/services/ramal_service.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+<div ng-controller="BranchController as _branchCtrl">
+<md-toolbar style="background-color: #212121">
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Minha lista</span>
+        </h2>
+        <span flex></span>
+        <md-button ng-click="_branchCtrl.aboutApp()" class="md-icon-button" aria-label="more_vert">
+            <md-icon class="material-design">more_vert</md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-content id="popupContainer">
+    <div layout="row">
+        <div flex-gt-sm="40" flex="40" >
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <span>Adicionar Ramais</span>
+                </div>
+            </md-toolbar>
+            <md-content layout-padding style="background-color: #E8EAF6; height: 365px">
+                <form name="ramalForm" ng-submit="_branchCtrl.save(_branchCtrl.form)">
+                    <md-input-container class="md-icon-float md-block">
+                        <label for="nome">Nome</label>
+                        <md-icon class="material-icons step" style="color: #0097A7">person</md-icon>
+                        <input id="nome" ng-model="_branchCtrl.form.nome" type="text">
+                    </md-input-container>
+                    <md-input-container class="md-icon-float md-block">
+                        <!-- Use floating label instead of placeholder -->
+                        <label for="ramal">Telefone ou Ramal</label>
+                        <md-icon class="material-icons step" style="color: #0097A7">call_end</md-icon>
+                        <input id="ramal" ng-model="_branchCtrl.form.numero" type="text">
+                        <div class="hint">(##)#####-#### ou ####</div>
+                    </md-input-container>
+                    <md-input-container class="md-icon-float md-block">
+                        <!-- Use floating label instead of placeholder -->
+                        <label for="unidade">Unidade</label>
+                        <md-icon class="material-icons step" style="color: #0097A7">domain</md-icon>
+                        <input id="unidade" ng-model="_branchCtrl.form.unidade" type="text">
+                    </md-input-container>
+                    <section>
+                        <md-button type="submit" class="md-raised md-primary">Enviar</md-button>
+                        <md-button ng-click="_branchCtrl.form = {}" class="md-raised md-accent">Cancelar</md-button>
+                    </section>
+
+                </form>
+            </md-content>
+        </div>
+        <div flex-gt-sm="60" flex="60">
+            <ui-view name="form" layout="column" style="height: 426px; overflow: hidden"></ui-view>
+        </div>
+    </div>
+</md-content>
+</div>
