@@ -9,7 +9,7 @@ Clone o projeto para sua máquina:
 Depois entre no repositório app-eRamal e instale as dependências do node
 
 > cd app-eRamal
-> node install
+> npm install
 
 Agora é necessário instalar as dependências do Bower
 
